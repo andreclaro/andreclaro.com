@@ -4,8 +4,6 @@ This is my minimalistic website built using Hugo, the world’s fastest framewor
 
 Website URL: https://www.andreclaro.com
 
-The website is deployed in a secure S3 bucket and accessible through Amazon CloudFront Global Edge Network.
-
 ## Useful Links
 
 - https://gohugo.io/getting-started
