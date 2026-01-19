@@ -41,6 +41,12 @@
   {{ block "links" . }} {{ end }}
   {{ partial "seo-schema.html" .}}
 
+  {{- with .Site.Params.cloudflareAnalyticsToken -}}
+    {{- if not hugo.IsServer -}}
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ . }}"}'></script>
+    {{- end -}}
+  {{- end -}}
+
   {{- if not hugo.IsServer -}}
       {{ template "_internal/google_analytics.html" . }}
   {{- end -}}
