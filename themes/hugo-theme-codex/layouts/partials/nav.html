@@ -1,16 +1,16 @@
 <nav class="nav" id="navigation">
   <ul class="nav__list">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-      <li>
-        <a {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} class="active"
-        {{end}} href="{{ .URL }}">{{ .Name }}</a>
-      </li>
-    {{ end }}
-    <li>
+    <li class="theme-toggle-item">
       <button class="theme-toggle" type="button" aria-label="Toggle color theme">
         <span class="theme-toggle__icon" aria-hidden="true"></span>
       </button>
     </li>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      <li>
+        <a {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} class="active"
+        {{end}} href="{{ .URL }}"{{ with .Params.target }} target="{{ . }}" rel="noopener"{{ end }}>{{ .Name }}</a>
+      </li>
+    {{ end }}
   </ul>
 </nav>

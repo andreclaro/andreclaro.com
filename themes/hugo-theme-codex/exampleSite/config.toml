@@ -61,7 +61,7 @@ copyright = "© {year}"
   identifier = "about"
   name = "about"
   title = "About"
-  url = "/"
+  url = "/about"
 
 [[menu.main]]
   identifier = "blog"

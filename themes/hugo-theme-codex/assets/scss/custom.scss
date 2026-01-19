@@ -126,6 +126,10 @@ html[data-theme="dark"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 2;
 }
 
 .theme-toggle:focus-visible {

@@ -63,6 +63,11 @@
   }
 }
 
+.nav__list li.theme-toggle-item {
+  margin: 0;
+  line-height: 0;
+}
+
 .nav__list a {
   color: $grey;
   text-decoration: none;

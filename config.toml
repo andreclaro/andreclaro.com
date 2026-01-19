@@ -59,10 +59,13 @@ copyright = "© {year}"
 #  identifier = "about"
 #  name = "about"
 #  title = "About"
-#  url = "/"
+#  url = "/about"
 
-# [[menu.main]]
-#  identifier = "blog"
-#  name = "blog"
-#  title = "Blog"
-#  url = "/blog"
+[[menu.main]]
+  identifier = "articles"
+  name = "Articles"
+  title = "Articles"
+  url = "https://x.com/andreclarocom/articles"
+  [menu.main.params]
+    target = "_blank"
+  
