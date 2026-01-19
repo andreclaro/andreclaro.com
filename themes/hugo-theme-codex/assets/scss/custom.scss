@@ -1,0 +1,144 @@
+/* Dark mode using system preference or manual override */
+:root {
+  color-scheme: light dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+@mixin dark-scope($scope) {
+  #{$scope} body {
+    background-color: #0f1115;
+    color: #e6e6e6;
+  }
+
+  #{$scope} a {
+    color: #c6b6ff;
+  }
+
+  #{$scope} .nav,
+  #{$scope} .burger__container,
+  #{$scope} footer {
+    background: #0f1115;
+  }
+
+  #{$scope} .burger__meat {
+    background: #f2f2f2;
+  }
+
+  #{$scope} .nav__list a {
+    color: #9aa0a6;
+  }
+
+  #{$scope} .nav__list a.active,
+  #{$scope} .nav__list a:hover,
+  #{$scope} .post__title a,
+  #{$scope} .pagination__title {
+    color: #f2f2f2;
+  }
+
+  #{$scope} .post__date,
+  #{$scope} .pagination__label,
+  #{$scope} .tag__link,
+  #{$scope} #TableOfContents a {
+    color: #9aa0a6;
+  }
+
+  #{$scope} #TableOfContents a.active {
+    color: #e6e6e6;
+  }
+
+  #{$scope} .post blockquote a {
+    color: #c6b6ff;
+  }
+
+  #{$scope} pre,
+  #{$scope} code,
+  #{$scope} pre code {
+    background-color: #1b1f27;
+    color: #e6e6e6;
+  }
+
+  #{$scope} .pagination__item:hover {
+    background-color: #1b1f27;
+  }
+
+  #{$scope} .tag__link {
+    background: rgba(144, 19, 254, 0.2);
+    color: #c6b6ff;
+  }
+
+  #{$scope} .tag__link:hover {
+    background: rgba(144, 19, 254, 0.3);
+  }
+
+  #{$scope} .post__content ul li::before {
+    color: #9aa0a6;
+  }
+
+  #{$scope} .social-icons__icon {
+    filter: invert(1);
+  }
+
+  #{$scope} table thead {
+    background: #1b1f27;
+  }
+
+  #{$scope} table th,
+  #{$scope} table td {
+    border-color: #2a2f3a;
+  }
+
+  #{$scope} .pagination__item .pagination__label,
+  #{$scope} .pagination__item .pagination__title {
+    color: inherit;
+  }
+
+  #{$scope} .pagination__item {
+    color: #e6e6e6;
+  }
+
+  #{$scope} .paginator {
+    filter: invert(1);
+  }
+}
+
+@include dark-scope("html[data-theme='dark']");
+
+@media (prefers-color-scheme: dark) {
+  @include dark-scope("html:not([data-theme])");
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  cursor: pointer;
+  height: 1.6rem;
+  width: 1.6rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.theme-toggle__icon::before {
+  content: "☾";
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.theme-toggle[data-theme="dark"] .theme-toggle__icon::before {
+  content: "☀︎";
+}
