@@ -1,10 +1,5 @@
 <nav class="nav" id="navigation">
   <ul class="nav__list">
-    <li class="theme-toggle-item">
-      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
-        <span class="theme-toggle__icon" aria-hidden="true"></span>
-      </button>
-    </li>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
       <li>
