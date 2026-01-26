@@ -59,10 +59,16 @@ main {
   margin-left: -0.8rem;  // offset to negate icon's padding to align with text above
 }
 
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-top: 1.5rem;
+  align-items: flex-start;
+}
+
 .building-section,
 .trusted-section {
-  margin-top: 1.5rem;
-  
   p {
     font-size: 0.75em;
     color: $black;
@@ -107,18 +113,23 @@ main {
 .logo-alcatel { height: 1.6em; }
 
 @media screen and (max-width: $medium) {
+  .info-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .building-section,
   .trusted-section {
     p {
       font-size: 0.7em;
     }
   }
-  
+
   .logo-item {
     font-size: 0.65em;
     padding: 0.12rem 0.35rem;
   }
-  
+
   .logo-image {
     height: 1.4em;
     margin: 0 0.3rem;
