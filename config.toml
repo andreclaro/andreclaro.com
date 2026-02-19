@@ -23,7 +23,7 @@ copyright = "© {year}"
   # cloudflareAnalyticsToken = ""
 
   # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
-  twitter = "https://twitter.com/andreclarocom"
+  twitter = "https://x.com/0xAndreOnline"
   github = "https://github.com/andreclaro"
   # email = "mailto:<your email>"
   # facebook = "https://facebook.com/<your handle>"
@@ -38,8 +38,8 @@ copyright = "© {year}"
   iconOrder = ["LinkedIn", "Twitter", "GitHub"]
 
   # Metadata for Twitter cards, defaults to params.twitter
-  twitterSite = "@andreclarocom"
-  twitterAuthor = "@andreclarocom"
+  twitterSite = "@0xAndreOnline"
+  twitterAuthor = "@0xAndreOnline"
 
   # Set to true to display page title in table of contents in blog posts.
   showPageTitleInTOC = true
@@ -67,7 +67,7 @@ copyright = "© {year}"
   identifier = "articles"
   name = "Articles"
   title = "Articles"
-  url = "https://x.com/andreclarocom/articles"
+  url = "https://x.com/0xAndreOnline/articles"
   [menu.main.params]
     target = "_blank"
   
